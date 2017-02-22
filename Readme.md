@@ -5,14 +5,16 @@
 
 заранее все скачайте и установите, т.к. с инетом на месте будут проблемы.
 
-- поставьте докер + убедитесь, что у вас работает docker run hello-world (https://docs.docker.com/engine/installation/)
+- поставьте докер + убедитесь, что у вас работает `docker run hello-world` (https://docs.docker.com/engine/installation/)
 !!! версия минимум 1.13
-- если docker-compose -v вернет ошибку, то надо его поставить: https://docs.docker.com/compose/install/
+- если `docker-compose -v` вернет ошибку, то надо его поставить: https://docs.docker.com/compose/install/
  
+```
 docker pull busybox
 docker pull alpine:3.5
 docker pull centos
 docker pull node:boron
+```
 
 - если еще не читали мой пост про init, обязательно прочтите: https://vk.com/wall-134346952_293
 
@@ -20,68 +22,57 @@ docker pull node:boron
 
 ## План
 
+1. Концепция
 
++ проблема админ vs разраб
+ - настройка среды
+ - обновления (подмена)
+ - замусоривание PATH
 
-1.
-проблема админ vs разраб
-     настройка среды
-     обновления (подмена)
-     замусоривание PATH
++ https://docs.docker.com/engine/understanding-docker/ картинки
+ - image + dockerfile
+ - container
+ - volume vs host dir, volume cont, shared, relabel
+ - networks
 
-https://docs.docker.com/engine/understanding-docker/ картинки
+2. Dockerfile
 
-image + dockerfile
-container
-volume vs host dir, volume cont, shared, relabel
-networks
+- compose  https://docs.docker.com/compose/gettingstarted/
+- https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/
+- alpine, debian, centos, node
+- docker hub
+- init особенности
+- healthchecks
+- registry
+- gitlab ci
+- docker-in-docker
 
-2.
-compose  https://docs.docker.com/compose/gettingstarted/
+3. Админство
 
-https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/
-alpine, debian, centos, node
-docker hub
+- docker inspect
+- cgroups - квоты
+- devicemapper - https://docs.docker.com/engine/userguide/storagedriver/device-mapper-driver/
+- tls
+- nat
+- docker proxy
+- internal dns !=bridge
+- логи
+- swarm + k8s
+- баги
+ + kernel panic https://github.com/docker/docker/issues/5618
+ + udp nat https://github.com/docker/docker/issues/11998
+ + openvpn https://github.com/docker/libnetwork/issues/779
+ + device or resource busy https://github.com/docker/docker/issues/22260
+ + strongswan snat: короче хуево все с SNAT у докера. самый адекватный вариант это костыльнуть башик, который будет тыркать docker inspect и прописывать нужные SNAT правила. вопрос только чем его дергать. по сути надо его дергать на старт докера и на любое изменения докер сетей. хуков у докера нет никаких
 
-init особенности
-
-healthchecks
-
-registry
-gitlab ci
-docker-in-docker
-
-3.
-docker inspect
-cgroups - квоты
-devicemapper - https://docs.docker.com/engine/userguide/storagedriver/device-mapper-driver/
-tls
-
-nat
-docker proxy
-internal dns !=bridge
-
-логи
-
-swarm + k8s
-
-kernel panic https://github.com/docker/docker/issues/5618
-udp nat https://github.com/docker/docker/issues/11998
-openvpn https://github.com/docker/libnetwork/issues/779
-device or resource busy https://github.com/docker/docker/issues/22260
-
-strongswan snat: короче хуево все с SNAT у докера. самый адекватный вариант это костыльнуть башик, который будет тыркать docker inspect и прописывать нужные SNAT правила. вопрос только чем его дергать. по сути надо его дергать на старт докера и на любое изменения докер сетей. хуков у докера нет никаких
-
-
-docker system prune
-https://github.com/docker/docker/pull/26108
-
+- `docker system prune` https://github.com/docker/docker/pull/26108
 
 ## Телеграм
 
-Kostya Esmukov, [22.02.17 08:20]
-https://docs.docker.com/compose/gettingstarted/#/step-2-create-a-dockerfile
+Kostya Esmukov, [22.02.17 08:20]  
+https://docs.docker.com/compose/gettingstarted/#/step-2-create-a-dockerfile  
 
-Kostya Esmukov, [22.02.17 08:25]
+Kostya Esmukov, [22.02.17 08:25]  
 ```
 // Load the http module to create an http server.
 var http = require('http');
@@ -99,7 +90,7 @@ server.listen(8000);
 console.log("Server running at http://127.0.0.1:8000/");
 ```
 
-Kostya Esmukov, [22.02.17 08:26]
+Kostya Esmukov, [22.02.17 08:26]  
 ```
 FROM node:boron
 ADD . /app
@@ -107,13 +98,13 @@ WORKDIR /app
 CMD ["node", "index.js"]
 ```
 
-Kostya Esmukov, [22.02.17 08:27]
+Kostya Esmukov, [22.02.17 08:27]  
 `docker build -t hi .`
 
-Kostya Esmukov, [22.02.17 08:31]
+Kostya Esmukov, [22.02.17 08:31]  
 `docker run -it --rm hi`
 
-Kostya Esmukov, [22.02.17 08:54]
+Kostya Esmukov, [22.02.17 08:54]  
 `docker run -it --rm -p 81:8000 --init hi`
 
 ## Запись
@@ -125,4 +116,5 @@ TODO
 - поиграться с busybox, alpine:3.5 и centos
 - volume relabel (volume flags в docker run -- s, z, Z)
 - compose
+- https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/
 - `docker system prune` (https://github.com/docker/docker/pull/26108)
