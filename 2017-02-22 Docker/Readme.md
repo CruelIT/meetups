@@ -22,7 +22,7 @@ docker pull node:boron
 
 ## План
 
-### 1 Концепция
+### 1. Концепция
 
 + проблема админ vs разраб
  - настройка среды
@@ -35,9 +35,9 @@ docker pull node:boron
  - volume vs host dir, volume cont, shared, relabel
  - networks
 
-### 2 Dockerfile
+### 2. Dockerfile
 
-- compose  https://docs.docker.com/compose/gettingstarted/
+- compose https://docs.docker.com/compose/gettingstarted/
 - https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/
 - alpine, debian, centos, node
 - docker hub
@@ -47,9 +47,9 @@ docker pull node:boron
 - gitlab ci
 - docker-in-docker
 
-### 3 Админство
+### 3. Админство
 
-- docker inspect
+- `docker inspect`
 - cgroups - квоты
 - devicemapper - https://docs.docker.com/engine/userguide/storagedriver/device-mapper-driver/
 - tls
