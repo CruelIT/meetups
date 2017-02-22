@@ -1,9 +1,9 @@
 # 22.02.17 - Docker - Kostya
 
 ## Анонс
-Докеровцы. Напоминаю: собираемся в среду 7.00
+Докеровцы. Напоминаю: собираемся в среду 7.00  
 
-заранее все скачайте и установите, т.к. с инетом на месте будут проблемы.
+заранее все скачайте и установите, т.к. с инетом на месте будут проблемы.  
 
 - поставьте докер + убедитесь, что у вас работает `docker run hello-world` (https://docs.docker.com/engine/installation/)
 !!! версия минимум 1.13
@@ -107,14 +107,6 @@ Kostya Esmukov, [22.02.17 08:31]
 Kostya Esmukov, [22.02.17 08:54]  
 `docker run -it --rm -p 81:8000 --init hi`
 
-## Запись
-
-https://drive.google.com/file/d/0B6eriKMc_luZUXVObmR3VDlER2M/view?usp=sharing
-
-## Бумага
-
-TODO
-
 ## Что не успели
 
 - поиграться с busybox, alpine:3.5 и centos
@@ -122,3 +114,12 @@ TODO
 - compose
 - https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/
 - `docker system prune` (https://github.com/docker/docker/pull/26108)
+- phalcon (случай Артура)
+
+## Запись
+
+https://drive.google.com/file/d/0B6eriKMc_luZUXVObmR3VDlER2M/view?usp=sharing
+
+## Бумага
+
+TODO
