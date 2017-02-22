@@ -22,7 +22,7 @@ docker pull node:boron
 
 ## План
 
-1. Концепция
+### 1 Концепция
 
 + проблема админ vs разраб
  - настройка среды
@@ -35,7 +35,7 @@ docker pull node:boron
  - volume vs host dir, volume cont, shared, relabel
  - networks
 
-2. Dockerfile
+### 2 Dockerfile
 
 - compose  https://docs.docker.com/compose/gettingstarted/
 - https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/
@@ -47,7 +47,7 @@ docker pull node:boron
 - gitlab ci
 - docker-in-docker
 
-3. Админство
+### 3 Админство
 
 - docker inspect
 - cgroups - квоты
@@ -108,6 +108,10 @@ Kostya Esmukov, [22.02.17 08:54]
 `docker run -it --rm -p 81:8000 --init hi`
 
 ## Запись
+
+TODO
+
+## Бумага
 
 TODO
 
