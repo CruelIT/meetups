@@ -109,7 +109,7 @@ Kostya Esmukov, [22.02.17 08:54]
 
 ## Запись
 
-TODO
+https://drive.google.com/file/d/0B6eriKMc_luZUXVObmR3VDlER2M/view?usp=sharing
 
 ## Бумага
 
