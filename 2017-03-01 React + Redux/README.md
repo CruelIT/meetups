@@ -51,6 +51,8 @@ Cм. [webpack.config.js](https://github.com/CruelIT/react-redux-todo-list-app/bl
 
 Основные принципы.
 
+См. доку к редаксу. Особенно [Introduction](http://redux.js.org/docs/introduction/).
+
 См. [ветку 3-redux](https://github.com/CruelIT/react-redux-todo-list-app/tree/3-redux) и коммиты в ней.
 
 ## О чём не рассказал
@@ -62,4 +64,5 @@ Cм. [webpack.config.js](https://github.com/CruelIT/react-redux-todo-list-app/bl
 * роутинг
 * immutableJS
 * работа с html-формами
+* Lifecycle компонентов (https://facebook.github.io/react/docs/react-component.html)
 
