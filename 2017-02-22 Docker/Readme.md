@@ -118,4 +118,4 @@ Kostya Esmukov, [22.02.17 08:54]
 
 ## Запись
 
-https://drive.google.com/file/d/0B6eriKMc_luZUXVObmR3VDlER2M/view?usp=sharing
+https://cloud.mail.ru/public/FZiM/m9ophUnoQ 
