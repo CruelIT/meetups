@@ -66,3 +66,6 @@ Cм. [webpack.config.js](https://github.com/CruelIT/react-redux-todo-list-app/bl
 * работа с html-формами
 * Lifecycle компонентов (https://facebook.github.io/react/docs/react-component.html)
 
+## Запись
+
+https://cloud.mail.ru/public/CMzH/XD5Mudhj2
