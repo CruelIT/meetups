@@ -68,4 +68,4 @@ Cм. [webpack.config.js](https://github.com/CruelIT/react-redux-todo-list-app/bl
 
 ## Запись
 
-https://cloud.mail.ru/public/CMzH/XD5Mudhj2
+https://cloud.mail.ru/public/MwZR/myfKPbjZV
